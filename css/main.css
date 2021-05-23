@@ -179,6 +179,10 @@ body {
   margin-bottom: 7rem !important;
 }
 
+.u-margin-top-medium {
+  margin-top: 3rem !important;
+}
+
 .u-text-center {
   text-align: center !important;
 }
@@ -188,6 +192,17 @@ body {
   margin-bottom: 10rem;
   background-color: #faf7f2;
   border-top: 1px solid rgba(140, 84, 49, 0.1);
+}
+
+.banner {
+  height: 40rem;
+  width: 100%;
+}
+
+.banner__imagen {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .button {
@@ -351,6 +366,78 @@ body {
   font-size: 1.4rem;
   font-weight: lighter;
   text-transform: uppercase;
+}
+
+.footer {
+  padding: 8rem 0;
+  background-color: #faf7f2;
+}
+
+.footer__logo {
+  height: 4.5rem;
+  width: auto;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 4rem;
+}
+
+.footer__list {
+  list-style: none;
+}
+
+.footer__section-list, .footer__redes {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.footer__item {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #a49f95;
+}
+
+.footer__link--correo, .footer__link--telefono, .footer__link--direccion {
+  font-size: 1.4rem;
+}
+
+.footer__redes {
+  margin-bottom: 0.5rem;
+}
+
+.footer__icono {
+  font-size: 2rem;
+  color: #1b262c;
+  margin-right: 2rem;
+}
+
+.footer__copy {
+  display: flex;
+  padding: 3rem 0 0 0;
+  border-top: 1px solid #1b262c;
+}
+
+.footer__copy-item {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer__copy-item:not(:last-child) {
+  margin-right: 12rem;
 }
 
 .header {

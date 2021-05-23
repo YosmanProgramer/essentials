@@ -1,0 +1,72 @@
+.footer {
+  padding: 8rem 0;
+  background-color: $color-section--light;
+  &__logo {
+    height: 4.5rem;
+    width: auto;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 4rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__section-list,
+  &__redes {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+
+  &__item {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-grey-dark;
+
+    &--correo,
+    &--telefono,
+    &--direccion {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__redes {
+    margin-bottom: 0.5rem;
+  }
+
+  &__icono {
+    font-size: 2rem;
+    color: $color-black;
+    margin-right: 2rem;
+  }
+
+  &__copy {
+    display: flex;
+    padding: 3rem 0 0 0;
+    border-top: 1px solid $color-black;
+
+    &-item {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      &:not(:last-child) {
+        margin-right: 12rem;
+      }
+    }
+  }
+}

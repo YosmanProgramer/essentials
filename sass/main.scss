@@ -10,12 +10,14 @@
 @import 'base/utilities';
 
 // components
+@import 'components/banner';
 @import 'components/button';
 @import 'components/categorias';
 @import 'components/cosmeticos';
 @import 'components/productos';
 
 // layout
+@import 'layout/footer';
 @import 'layout/header';
 @import 'layout/nav';
 
