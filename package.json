@@ -1,0 +1,22 @@
+{
+  "name": "essentials",
+  "version": "1.0.0",
+  "description": "Productos naturales para la piel",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "productos",
+    "naturales",
+    "piel",
+    "belleza",
+    "cosmeticos"
+  ],
+  "author": "Andrea",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
