@@ -6,6 +6,7 @@
   font-size: 1.4rem;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   letter-spacing: 0.2rem;
   border-radius: 50%;
   &--light {
@@ -13,6 +14,16 @@
     height: 12rem;
     color: $color-white;
     border: 1px solid $color-white;
+  }
+
+  &--dark {
+    width: 15rem;
+    height: 15rem;
+    color: $color-black;
+    border: 1px solid $color-black;
+  }
+
+  &--animation {
     @include animation(top-bottom);
   }
 }

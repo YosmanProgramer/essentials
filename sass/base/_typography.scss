@@ -15,9 +15,16 @@ $silk-serif-light: 'silk-serif-300';
 }
 $silk-serif-Extralight: 'silk-serif-100';
 
+@font-face {
+  font-family: 'silk-serif-400';
+  src: url('../../fonts/silk-serif/Silk Serif Regular.otf');
+  //   font-weight: 100;
+}
+$silk-serif-regular: 'silk-serif-400';
+
 .heading-primary {
   font-family: $silk-serif-light;
-  font-size: 6.5rem;
+  font-size: 6.4rem;
   font-weight: 100;
   letter-spacing: 0.3rem;
   color: $color-white;
@@ -40,5 +47,32 @@ $silk-serif-Extralight: 'silk-serif-100';
   div {
     margin-top: 1rem;
     @include animation(right-left);
+  }
+}
+
+.heading-secondary {
+  font-family: $silk-serif-regular;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  color: $color-primary;
+  line-height: 1;
+  span {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+}
+
+.paragraph {
+  font-family: $silk-serif-light;
+  font-size: 3rem;
+  text-align: center;
+  padding: 12rem;
+  background-color: $color-section--light;
+
+  span {
+    font-family: $silk-serif-Extralight;
   }
 }
