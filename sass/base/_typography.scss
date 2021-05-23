@@ -97,6 +97,10 @@ $silk-serif-bold: 'silk-serif-700';
     width: 2rem;
     text-align: center;
   }
+
+  &--black {
+    color: $color-black;
+  }
 }
 
 .paragraph {

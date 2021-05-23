@@ -149,6 +149,10 @@ body {
   text-align: center;
 }
 
+.heading-tertiary--black {
+  color: #1b262c;
+}
+
 .paragraph {
   font-family: "silk-serif-300";
   font-size: 3rem;
@@ -231,17 +235,26 @@ body {
   border: 1px solid #1b262c;
 }
 
-.button--todos {
+.button--todos, .button--productos {
   position: absolute;
-  left: 50%;
-  bottom: -10rem;
-  transform: translateX(-50%);
   width: 15rem;
   height: 15rem;
   font-size: 1.2rem;
   color: #1b262c;
   background-color: #edece7;
   z-index: 100;
+}
+
+.button--todos {
+  left: 50%;
+  bottom: -10rem;
+  transform: translateX(-50%);
+}
+
+.button--productos {
+  top: 40%;
+  left: 65%;
+  transform: translate(-50%, -50%);
 }
 
 .button--animation {
@@ -440,12 +453,25 @@ body {
   margin-right: 12rem;
 }
 
+@font-face {
+  font-family: 'silk-serif-300';
+  src: url("../../fonts/silk-serif/Silk Serif Light.otf");
+}
+
 .header {
   position: relative;
-  background-image: url(../../img/fondoindex.jpg);
   background-size: cover;
   background-position: top;
+}
+
+.header--index {
+  background-image: url(../../img/fondoindex.jpg);
   height: 100vh;
+}
+
+.header--nuestraMarca {
+  height: auto;
+  background-color: #faf7f2;
 }
 
 .header__content-box {
@@ -463,6 +489,83 @@ body {
   animation: top-bottom 0.8s 0.6s ease-in-out backwards;
 }
 
+.header__marca {
+  position: relative;
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.header__marca-imagen--derecha, .header__marca-imagen--izquierda {
+  position: absolute;
+  top: 0;
+  width: 13%;
+  object-fit: cover;
+}
+
+.header__marca-imagen--derecha {
+  right: 0;
+}
+
+.header__marca-imagen--izquierda {
+  left: 0;
+}
+
+.header__marca-imagen--centro {
+  width: 30%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.header__marca-slogan {
+  position: absolute;
+  top: 17rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__flotante-titulo--izquierdo, .header__flotante-titulo--derecho {
+  position: absolute;
+  top: 70%;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 6rem;
+}
+
+.header__flotante-titulo--izquierdo span, .header__flotante-titulo--derecho span {
+  color: #1b262c;
+  font-size: inherit;
+}
+
+.header__flotante-titulo--izquierdo {
+  left: 26.4%;
+}
+
+.header__flotante-titulo--derecho {
+  right: 29.3%;
+}
+
+.header__marca-parrafo {
+  font-family: "silk-serif-300";
+}
+
+.header__marca-parrafo--izquierda, .header__marca-parrafo--derecha {
+  position: absolute;
+  bottom: 0;
+}
+
+.header__marca-parrafo--izquierda {
+  left: 15rem;
+}
+
+.header__marca-parrafo--derecha {
+  right: 15rem;
+  text-align: right;
+}
+
+.header__marca-parrafo span {
+  text-transform: uppercase;
+}
+
 .nav {
   padding-top: 3.5rem;
 }
@@ -477,8 +580,15 @@ body {
 }
 
 .nav__link {
-  color: #fff;
   text-decoration: none;
+}
+
+.nav__link--light {
+  color: #fff;
+}
+
+.nav__link--dark {
+  color: #1b262c;
 }
 
 .nav__logo {
@@ -486,13 +596,22 @@ body {
   width: auto;
 }
 
-.nav .u-contenedor {
+.nav--light .u-contenedor,
+.nav--dark .u-contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 6rem;
+}
+
+.nav--light .u-contenedor {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+}
+
+.nav--dark .u-contenedor {
+  border-top: 1px solid #1b262c;
+  border-bottom: 1px solid #1b262c;
 }
 
 .seccion-productos {

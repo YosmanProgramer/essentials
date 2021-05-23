@@ -23,17 +23,27 @@
     border: 1px solid $color-black;
   }
 
-  &--todos {
+  &--todos,
+  &--productos {
     position: absolute;
-    left: 50%;
-    bottom: -10rem;
-    transform: translateX(-50%);
     width: 15rem;
     height: 15rem;
     font-size: 1.2rem;
     color: $color-black;
     background-color: $color-grey;
     z-index: 100;
+  }
+
+  &--todos {
+    left: 50%;
+    bottom: -10rem;
+    transform: translateX(-50%);
+  }
+
+  &--productos {
+    top: 40%;
+    left: 65%;
+    transform: translate(-50%, -50%);
   }
 
   &--animation {
