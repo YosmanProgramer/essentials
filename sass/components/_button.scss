@@ -1,0 +1,18 @@
+.button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  border-radius: 50%;
+  &--light {
+    width: 12rem;
+    height: 12rem;
+    color: $color-white;
+    border: 1px solid $color-white;
+    @include animation(top-bottom);
+  }
+}

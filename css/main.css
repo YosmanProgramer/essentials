@@ -1,0 +1,190 @@
+@keyframes right-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes left-right {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes top-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #1b262c;
+}
+
+@font-face {
+  font-family: 'silk-serif-300';
+  src: url("../../fonts/silk-serif/Silk Serif Light.otf");
+}
+
+@font-face {
+  font-family: 'silk-serif-100';
+  src: url("../../fonts/silk-serif/Silk Serif ExtraLight Italic.otf");
+}
+
+.heading-primary {
+  font-family: "silk-serif-300";
+  font-size: 6.5rem;
+  font-weight: 100;
+  letter-spacing: 0.3rem;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  animation: right-left 1s ease-in-out;
+}
+
+.heading-primary--before {
+  display: block;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  animation: right-left 1s ease-in-out;
+}
+
+.heading-primary--italic {
+  font-family: "silk-serif-100";
+  animation: right-left 1s ease-in-out;
+}
+
+.heading-primary div {
+  margin-top: 1rem;
+  animation: right-left 1s ease-in-out;
+}
+
+.u-contenedor {
+  max-width: 120rem !important;
+  width: 95% !important;
+  margin: 0 auto !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 7rem !important;
+}
+
+.button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  border-radius: 50%;
+}
+
+.button--light {
+  width: 12rem;
+  height: 12rem;
+  color: #fff;
+  border: 1px solid #fff;
+  animation: top-bottom 0.8s 0.6s ease-in-out backwards;
+}
+
+.header {
+  position: relative;
+  background-image: url(../../img/fondoindex.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+
+.header__content-box {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header__button {
+  cursor: pointer;
+  color: #fff;
+  font-size: 2.5rem;
+  animation: top-bottom 0.8s 0.6s ease-in-out backwards;
+}
+
+.nav {
+  padding-top: 3.5rem;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 6.5rem;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__logo {
+  height: 4.5rem;
+  width: auto;
+}
+
+.nav .u-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}

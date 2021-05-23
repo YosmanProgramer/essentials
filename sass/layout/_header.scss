@@ -1,0 +1,22 @@
+.header {
+  position: relative;
+  background-image: url(../../img/fondoindex.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+
+  &__content-box {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__button {
+    cursor: pointer;
+    color: $color-white;
+    font-size: 2.5rem;
+    @include animation(top-bottom);
+  }
+}
