@@ -16,3 +16,14 @@
 .u-margin-bottom-big {
   margin-bottom: 7rem !important;
 }
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-window-small {
+  height: 20rem;
+  margin-bottom: 10rem;
+  background-color: $color-section--light;
+  border-top: 1px solid rgba($color-primary, 0.1);
+}

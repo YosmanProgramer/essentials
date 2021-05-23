@@ -73,6 +73,11 @@ body {
   src: url("../../fonts/silk-serif/Silk Serif Regular.otf");
 }
 
+@font-face {
+  font-family: 'silk-serif-700';
+  src: url("../../fonts/silk-serif/Silk Serif Bold.otf");
+}
+
 .heading-primary {
   font-family: "silk-serif-300";
   font-size: 6.4rem;
@@ -105,10 +110,18 @@ body {
 .heading-secondary {
   font-family: "silk-serif-400";
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.3rem;
-  color: #8c5431;
   line-height: 1;
+}
+
+.heading-secondary--brown {
+  color: #8c5431;
+}
+
+.heading-secondary--black {
+  font-family: "silk-serif-700";
+  color: #1b262c;
 }
 
 .heading-secondary span {
@@ -116,6 +129,24 @@ body {
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+
+.heading-tertiary {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  font-family: "silk-serif-300";
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.heading-tertiary span {
+  position: absolute;
+  height: 14rem;
+  width: 2rem;
+  text-align: center;
 }
 
 .paragraph {
@@ -148,6 +179,17 @@ body {
   margin-bottom: 7rem !important;
 }
 
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-window-small {
+  height: 20rem;
+  margin-bottom: 10rem;
+  background-color: #faf7f2;
+  border-top: 1px solid rgba(140, 84, 49, 0.1);
+}
+
 .button {
   display: inline-flex;
   flex-direction: column;
@@ -174,8 +216,74 @@ body {
   border: 1px solid #1b262c;
 }
 
+.button--todos {
+  position: absolute;
+  left: 50%;
+  bottom: -10rem;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: 15rem;
+  font-size: 1.2rem;
+  color: #1b262c;
+  background-color: #edece7;
+  z-index: 100;
+}
+
 .button--animation {
   animation: top-bottom 0.8s 0.6s ease-in-out backwards;
+}
+
+@font-face {
+  font-family: 'silk-serif-300';
+  src: url("../../fonts/silk-serif/Silk Serif Light.otf");
+}
+
+.categorias {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.categorias__imagen {
+  display: block;
+  height: auto;
+  width: 30%;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+}
+
+.categorias__titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "silk-serif-300";
+  font-size: 5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.categorias__flotante {
+  position: absolute;
+  font-family: "silk-serif-300";
+  color: #fff;
+}
+
+.categorias__flotante--arriba {
+  text-align: left;
+  top: -3rem;
+  left: 0;
+}
+
+.categorias__flotante--abajo {
+  text-align: right;
+  bottom: -6rem;
+  right: 0;
 }
 
 .cosmeticos {
@@ -208,6 +316,41 @@ body {
 
 .cosmeticos p {
   margin-bottom: 7rem;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.productos__imagen {
+  width: 100%;
+}
+
+.productos__detalles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.productos__descripcion {
+  display: flex;
+  flex-direction: column;
+}
+
+.productos__precio {
+  font-weight: 700;
+}
+
+.productos p {
+  font-size: 1.4rem;
+}
+
+.productos span {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
 .header {
@@ -263,4 +406,16 @@ body {
   height: 6rem;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+}
+
+.seccion-productos {
+  position: relative;
+  padding: 10rem 0;
+  background-color: #faf7f2;
+}
+
+.seccion-categorias {
+  position: relative;
+  padding: 0 0 10rem 0;
+  background-color: #8c5431;
 }

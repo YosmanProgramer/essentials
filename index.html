@@ -71,7 +71,7 @@
           </div>
           <div class="cosmeticos__item">
             <div class="u-margin-bottom-medium">
-              <h2 class="heading-secondary">
+              <h2 class="heading-secondary heading-secondary--brown">
                 <span>Cosméticos</span><br />
                 Para todo tipo de piel
               </h2>
@@ -92,5 +92,98 @@
         </div>
       </div>
     </section>
+    <main class="section seccion-productos">
+      <div class="u-contenedor">
+        <div class="u-margin-bottom-big">
+          <h2 class="heading-secondary heading-secondary--black">
+            Productos destacados
+          </h2>
+        </div>
+        <div class="productos">
+          <div class="productos__item">
+            <img
+              src="img/producto1.jpg"
+              alt="producto 1"
+              class="productos__imagen"
+            />
+            <div class="productos__detalles">
+              <div class="productos__descripcion">
+                <p>Limpieza Vitamina C Serum</p>
+                <span>SkinKare - Limpieza</span>
+              </div>
+              <p class="productos__precio">$45.000</p>
+            </div>
+          </div>
+          <div class="productos__item">
+            <img
+              src="img/producto2.jpg"
+              alt="producto 2"
+              class="productos__imagen"
+            />
+            <div class="productos__detalles">
+              <div class="productos__descripcion">
+                <p>Limpieza Vitamina C Serum</p>
+                <span>SkinKare - Limpieza</span>
+              </div>
+              <p class="productos__precio">$45.000</p>
+            </div>
+          </div>
+          <div class="productos__item">
+            <img
+              src="img/producto4.jpg"
+              alt="producto 4"
+              class="productos__imagen"
+            />
+            <div class="productos__detalles">
+              <div class="productos__descripcion">
+                <p>Limpieza Vitamina C Serum</p>
+                <span>SkinKare - Limpieza</span>
+              </div>
+              <p class="productos__precio">$45.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-text-center">
+        <a href="#" class="button button--todos">Ver Todos</a>
+      </div>
+    </main>
+    <section class="section seccion-categorias">
+      <div class="u-contenedor">
+        <div class="u-window-small"></div>
+        <div class="categorias">
+          <img
+            src="img/imgcategorias.jpg"
+            alt="imagen categorias"
+            class="categorias__imagen"
+          />
+          <h2 class="categorias__titulo">Limpieza, Hidratación, Exfoliación</h2>
+          <p class="categorias__flotante categorias__flotante--arriba">
+            Múltiples beneficios <br />
+            para todo tipo de piel con <br />
+            propiedades naturales
+          </p>
+          <p class="categorias__flotante categorias__flotante--abajo">
+            Con una fórmula <br />
+            perfeccionada contra <br />
+            el envejecimiento
+          </p>
+          <h3 class="heading-tertiary circle">
+            Essentials Skin Care Cosmetics
+          </h3>
+        </div>
+      </div>
+    </section>
+    <script>
+      const circle = document.querySelector('.circle');
+      const circleArray = circle.textContent.split('');
+      circle.textContent = '';
+
+      circleArray.forEach(function (__, i) {
+        circle.innerHTML += `<span style="transform: rotate(${
+          (i + 1) * 11.5
+        }deg)">${circleArray[i]}</span>`;
+      });
+    </script>
   </body>
 </html>
