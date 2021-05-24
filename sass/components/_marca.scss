@@ -1,0 +1,24 @@
+.marca {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+
+  &__item {
+  }
+
+  &__imagen {
+    width: 80%;
+  }
+
+  &__parrafo:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &__textura-crema {
+    position: absolute;
+    bottom: -8rem;
+    right: 10rem;
+    width: 15rem;
+    height: 15rem;
+  }
+}

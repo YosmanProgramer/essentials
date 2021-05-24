@@ -1,10 +1,20 @@
 .banner {
-  height: 40rem;
-  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &__imagen {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  &--index {
+    height: 40rem;
+    background-image: url(../img/imagenbanner.jpg);
+  }
+
+  &--marca {
+    padding: 25rem 0;
+    height: 50rem;
+    background-image: url(../img/img_marca/banner.jpg);
+    margin-top: -25rem;
   }
 }

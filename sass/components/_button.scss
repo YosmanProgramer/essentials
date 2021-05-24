@@ -41,9 +41,17 @@
   }
 
   &--productos {
-    top: 40%;
+    top: 32%;
     left: 65%;
     transform: translate(-50%, -50%);
+  }
+
+  &--marca {
+    width: 15rem;
+    height: 15rem;
+    font-size: 1.2rem;
+    color: $color-black;
+    background-color: $color-white;
   }
 
   &--animation {

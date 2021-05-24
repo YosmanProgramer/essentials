@@ -11,7 +11,7 @@ $silk-serif-light: 'silk-serif-300';
   background-position: top;
 
   &--index {
-    background-image: url(../../img/fondoindex.jpg);
+    background-image: url(../img/fondoindex.jpg);
     height: 100vh;
   }
 
@@ -39,6 +39,7 @@ $silk-serif-light: 'silk-serif-300';
   &__marca {
     position: relative;
     margin-top: 10rem;
+    padding-bottom: 15rem;
     text-align: center;
 
     &-imagen {
@@ -68,13 +69,16 @@ $silk-serif-light: 'silk-serif-300';
       position: absolute;
       top: 17rem;
       left: 50%;
+      font-size: 1.2rem;
+      color: $color-primary;
+      text-transform: uppercase;
       transform: translate(-50%, -50%);
     }
   }
   &__flotante-titulo--izquierdo,
   &__flotante-titulo--derecho {
     position: absolute;
-    top: 70%;
+    top: 60%;
     text-transform: uppercase;
     color: $color-white;
     font-size: 6rem;
@@ -86,11 +90,11 @@ $silk-serif-light: 'silk-serif-300';
   }
 
   &__flotante-titulo--izquierdo {
-    left: 26.4%;
+    left: 40.2rem;
   }
 
   &__flotante-titulo--derecho {
-    right: 29.3%;
+    right: 44.7rem;
   }
 
   &__marca-parrafo {
@@ -99,7 +103,7 @@ $silk-serif-light: 'silk-serif-300';
     &--izquierda,
     &--derecha {
       position: absolute;
-      bottom: 0;
+      bottom: 15rem;
     }
 
     &--izquierda {

@@ -131,7 +131,25 @@ body {
   text-transform: uppercase;
 }
 
+.heading-secondary--upper {
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
 .heading-tertiary {
+  font-family: "silk-serif-700";
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading-tertiary span {
+  font-family: "silk-serif-300";
+  font-style: italic;
+  font-weight: 100;
+}
+
+.heading-four {
   position: absolute;
   top: 0;
   left: 60%;
@@ -139,18 +157,30 @@ body {
   font-weight: 100;
   text-transform: uppercase;
   font-size: 1.8rem;
-  color: #fff;
 }
 
-.heading-tertiary span {
+.heading-four span {
   position: absolute;
   height: 14rem;
   width: 2rem;
   text-align: center;
 }
 
-.heading-tertiary--black {
+.heading-four--marca {
+  top: 87%;
+  left: 39%;
+}
+
+.heading-four--black {
   color: #1b262c;
+}
+
+.heading-four--white {
+  color: #fff;
+}
+
+.heading-four--brown {
+  color: #8c5431;
 }
 
 .paragraph {
@@ -176,11 +206,15 @@ body {
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem !important;
+  margin-bottom: 5rem !important;
 }
 
 .u-margin-bottom-big {
   margin-bottom: 7rem !important;
+}
+
+.u-margin-bottom-huge {
+  margin-bottom: 10rem !important;
 }
 
 .u-margin-top-medium {
@@ -199,14 +233,24 @@ body {
 }
 
 .banner {
-  height: 40rem;
-  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.banner__imagen {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.banner--index {
+  height: 40rem;
+  background-image: url(../img/imagenbanner.jpg);
+}
+
+.banner--marca {
+  padding: 25rem 0;
+  height: 50rem;
+  background-image: url(../img/img_marca/banner.jpg);
+  margin-top: -25rem;
 }
 
 .button {
@@ -252,9 +296,17 @@ body {
 }
 
 .button--productos {
-  top: 40%;
+  top: 32%;
   left: 65%;
   transform: translate(-50%, -50%);
+}
+
+.button--marca {
+  width: 15rem;
+  height: 15rem;
+  font-size: 1.2rem;
+  color: #1b262c;
+  background-color: #fff;
 }
 
 .button--animation {
@@ -344,6 +396,28 @@ body {
 
 .cosmeticos p {
   margin-bottom: 7rem;
+}
+
+.marca {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+
+.marca__imagen {
+  width: 80%;
+}
+
+.marca__parrafo:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.marca__textura-crema {
+  position: absolute;
+  bottom: -8rem;
+  right: 10rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 .productos {
@@ -465,7 +539,7 @@ body {
 }
 
 .header--index {
-  background-image: url(../../img/fondoindex.jpg);
+  background-image: url(../img/fondoindex.jpg);
   height: 100vh;
 }
 
@@ -492,6 +566,7 @@ body {
 .header__marca {
   position: relative;
   margin-top: 10rem;
+  padding-bottom: 15rem;
   text-align: center;
 }
 
@@ -520,12 +595,15 @@ body {
   position: absolute;
   top: 17rem;
   left: 50%;
+  font-size: 1.2rem;
+  color: #8c5431;
+  text-transform: uppercase;
   transform: translate(-50%, -50%);
 }
 
 .header__flotante-titulo--izquierdo, .header__flotante-titulo--derecho {
   position: absolute;
-  top: 70%;
+  top: 60%;
   text-transform: uppercase;
   color: #fff;
   font-size: 6rem;
@@ -537,11 +615,11 @@ body {
 }
 
 .header__flotante-titulo--izquierdo {
-  left: 26.4%;
+  left: 40.2rem;
 }
 
 .header__flotante-titulo--derecho {
-  right: 29.3%;
+  right: 44.7rem;
 }
 
 .header__marca-parrafo {
@@ -550,7 +628,7 @@ body {
 
 .header__marca-parrafo--izquierda, .header__marca-parrafo--derecha {
   position: absolute;
-  bottom: 0;
+  bottom: 15rem;
 }
 
 .header__marca-parrafo--izquierda {
@@ -624,4 +702,10 @@ body {
   position: relative;
   padding: 0 0 10rem 0;
   background-color: #8c5431;
+}
+
+.seccion-marca {
+  position: relative;
+  padding: 10rem 0 40rem 0;
+  background-color: #fbfaf8;
 }
