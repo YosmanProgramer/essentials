@@ -56,6 +56,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #1b262c;
+  background-color: #faf7f2;
 }
 
 @font-face {
@@ -455,6 +456,39 @@ body {
   text-transform: uppercase;
 }
 
+.suscripcion {
+  display: grid;
+  align-items: center;
+  gap: 8rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.suscripcion__input, .suscripcion__button {
+  font-size: 2rem;
+  border: none;
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.suscripcion__input:focus, .suscripcion__button:focus {
+  outline: none;
+}
+
+.suscripcion__input {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #1b262c;
+  margin-right: -6rem;
+}
+
+.suscripcion__button {
+  cursor: pointer;
+}
+
+.suscripcion__imagen {
+  width: 100%;
+}
+
 .footer {
   padding: 8rem 0;
   background-color: #faf7f2;
@@ -546,6 +580,11 @@ body {
 .header--nuestraMarca {
   height: auto;
   background-color: #faf7f2;
+}
+
+.header--productos {
+  height: 50rem;
+  background-image: url(../img/img_productos/portadaproductos.jpg);
 }
 
 .header__content-box {
@@ -692,6 +731,11 @@ body {
   border-bottom: 1px solid #1b262c;
 }
 
+.seccion-nuestra-marca {
+  background-color: #fff;
+  padding-bottom: 1rem;
+}
+
 .seccion-productos {
   position: relative;
   padding: 10rem 0;
@@ -708,4 +752,10 @@ body {
   position: relative;
   padding: 10rem 0 40rem 0;
   background-color: #fbfaf8;
+}
+
+.seccion-suscripcion {
+  padding: 5rem;
+  border-top: 1px solid #1b262c;
+  border-bottom: 1px solid #1b262c;
 }

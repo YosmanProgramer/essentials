@@ -20,6 +20,11 @@ $silk-serif-light: 'silk-serif-300';
     background-color: $color-section--light;
   }
 
+  &--productos {
+    height: 50rem;
+    background-image: url(../img/img_productos/portadaproductos.jpg);
+  }
+
   &__content-box {
     position: absolute;
     top: 65%;
