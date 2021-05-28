@@ -29,11 +29,24 @@ $silk-serif-regular: 'silk-serif-400';
 }
 $silk-serif-bold: 'silk-serif-700';
 
+@font-face {
+  font-family: 'silk-serif-italic-400';
+  src: url('../../fonts/silk-serif/Silk Serif Regular Italic.otf');
+  //   font-weight: 100;
+}
+$silk-serif-italic: 'silk-serif-italic-400';
+
+@font-face {
+  font-family: 'silk-serif-semiBold-500';
+  src: url('../../fonts/silk-serif/Silk Serif SemiBold.otf');
+  //   font-weight: 100;
+}
+$silk-serif-semiBold: 'silk-serif-semiBold-500';
+
 .heading-primary {
-  font-family: $silk-serif-light;
+  font-family: $silk-serif-regular;
   font-size: 6.4rem;
   font-weight: 100;
-  letter-spacing: 0.3rem;
   color: $color-white;
   text-transform: uppercase;
   line-height: 1;
@@ -60,6 +73,7 @@ $silk-serif-bold: 'silk-serif-700';
     font-family: $font-body;
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    letter-spacing: 0.3rem;
     @include animation(right-left);
   }
   &--italic {
@@ -96,7 +110,6 @@ $silk-serif-bold: 'silk-serif-700';
   font-family: $silk-serif-regular;
   font-size: 4rem;
   font-weight: 400;
-  letter-spacing: 0.3rem;
   line-height: 1;
 
   @include responsive(tab-hor) {
@@ -113,10 +126,11 @@ $silk-serif-bold: 'silk-serif-700';
 
   &--brown {
     color: $color-primary;
+    font-family: $silk-serif-semiBold;
   }
 
   &--black {
-    font-family: $silk-serif-bold;
+    font-family: $silk-serif-semiBold;
     color: $color-black;
   }
 
@@ -144,7 +158,7 @@ $silk-serif-bold: 'silk-serif-700';
   line-height: 1.2;
 
   span {
-    font-family: $silk-serif-light;
+    font-family: $silk-serif-italic;
     font-style: italic;
     font-weight: 100;
   }
@@ -204,14 +218,14 @@ $silk-serif-bold: 'silk-serif-700';
 }
 
 .paragraph {
-  font-family: $silk-serif-light;
+  font-family: $silk-serif-regular;
   font-size: 3rem;
   text-align: center;
   padding: 12rem;
   background-color: $color-section--light;
 
   span {
-    font-family: $silk-serif-Extralight;
+    font-family: $silk-serif-italic;
   }
 
   @include responsive(tab-hor) {

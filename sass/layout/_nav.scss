@@ -4,6 +4,10 @@
   &__list {
     list-style: none;
     display: flex;
+
+    @include responsive(tab-ver) {
+      visibility: hidden;
+    }
   }
   &__item:not(:last-child) {
     margin-right: 6.5rem;

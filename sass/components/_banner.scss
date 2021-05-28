@@ -24,8 +24,10 @@
   }
 
   &--marca {
-    padding: 25rem 0;
+    padding: 15rem 0;
     background-image: url(../img/img_marca/banner.jpg);
+    background-size: cover;
+    background-position: top;
     margin-top: -25rem;
 
     @include responsive(tab-hor) {

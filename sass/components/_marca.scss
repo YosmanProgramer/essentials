@@ -11,14 +11,22 @@
 
   &__item:nth-child(1) {
     position: relative;
-    @include responsive(tab-ver) {
+    @include responsive(tab-hor) {
+      margin-bottom: 5rem;
     }
   }
 
   &__item:nth-child(2) {
     position: relative;
+    width: 80%;
+    @include responsive(tab-hor) {
+      width: 100%;
+    }
+
     @include responsive(tab-ver) {
-      padding: 6rem 2rem;
+    }
+
+    @include responsive(phone) {
     }
   }
 
@@ -46,17 +54,7 @@
     width: 30%;
 
     @include responsive(tab-hor) {
-      bottom: -15%;
-      right: -8%;
-    }
-
-    @include responsive(tab-ver) {
-      width: 20%;
-      bottom: -6%;
-    }
-
-    @include responsive(phone) {
-      bottom: 0;
+      display: none;
     }
   }
 }

@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'silk-serif-300';
-  src: url('../../fonts/silk-serif/Silk Serif Light.otf');
+  font-family: 'silk-serif-400';
+  src: url('../../fonts/silk-serif/Silk Serif Regular.otf');
   //   font-weight: 300;
 }
-$silk-serif-light: 'silk-serif-300';
+$silk-serif-regular: 'silk-serif-400';
 
 .categorias {
   position: relative;
@@ -13,8 +13,8 @@ $silk-serif-light: 'silk-serif-300';
   &__imagen {
     display: block;
     width: 30%;
-    border-top-left-radius: 45%;
-    border-top-right-radius: 45%;
+    border-top-left-radius: 31rem;
+    border-top-right-radius: 31rem;
 
     @include responsive(tab-ver) {
       width: 50%;
@@ -35,11 +35,10 @@ $silk-serif-light: 'silk-serif-300';
     width: 100%;
     text-align: center;
 
-    font-family: $silk-serif-light;
+    font-family: $silk-serif-regular;
     font-size: 5rem;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 3px;
     color: $color-white;
 
     @include responsive(tab-hor) {
@@ -59,6 +58,10 @@ $silk-serif-light: 'silk-serif-300';
     position: absolute;
     font-family: $silk-serif-light;
     color: $color-white;
+
+    @include responsive(tab-hor) {
+      display: none;
+    }
 
     &--arriba {
       text-align: left;

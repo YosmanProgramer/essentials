@@ -5,6 +5,13 @@
 }
 $silk-serif-light: 'silk-serif-300';
 
+@font-face {
+  font-family: 'silk-serif-400';
+  src: url('../../fonts/silk-serif/Silk Serif Regular.otf');
+  //   font-weight: 300;
+}
+$silk-serif-regular: 'silk-serif-400';
+
 .header {
   position: relative;
   background-size: cover;
@@ -95,8 +102,8 @@ $silk-serif-light: 'silk-serif-300';
       }
       &--centro {
         width: 30vw;
-        border-top-left-radius: 50%;
-        border-top-right-radius: 50%;
+        border-top-left-radius: 34rem;
+        border-top-right-radius: 34rem;
 
         @include responsive(tab-hor) {
           width: 35vw;
@@ -128,10 +135,12 @@ $silk-serif-light: 'silk-serif-300';
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    font-family: $silk-serif-regular;
     text-align: center;
     text-transform: uppercase;
     color: $color-black;
     font-size: 6rem;
+    word-spacing: 10rem;
 
     span {
       color: $color-white;
@@ -141,6 +150,9 @@ $silk-serif-light: 'silk-serif-300';
 
   &__marca-parrafo {
     font-family: $silk-serif-light;
+    @include responsive(phone) {
+      display: none;
+    }
 
     &--izquierda,
     &--derecha {
@@ -178,5 +190,14 @@ $silk-serif-light: 'silk-serif-300';
     @include absCenter;
     top: 55%;
     width: 22%;
+
+    @include responsive(tab-ver) {
+      width: 40%;
+      top: 56%;
+    }
+
+    @include responsive(tab-ver) {
+      width: 45%;
+    }
   }
 }

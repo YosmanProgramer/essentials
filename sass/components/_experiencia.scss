@@ -32,8 +32,8 @@
 
   &__imagen {
     width: 85%;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
+    border-top-right-radius: 31rem;
+    border-top-left-radius: 31rem;
 
     @include responsive(tab-ver) {
       width: 50%;

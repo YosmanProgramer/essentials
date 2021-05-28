@@ -14,10 +14,14 @@
     font-size: 2rem;
     border: none;
     padding: 1.5rem;
-    background-color: $color-white;
+    background-color: $color-section--dark;
     &:focus {
       outline: none;
     }
+  }
+
+  &__button {
+    background-color: transparent;
   }
 
   &__input {

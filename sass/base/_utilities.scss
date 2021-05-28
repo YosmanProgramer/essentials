@@ -4,6 +4,11 @@
   width: 95% !important;
   margin: 0 auto !important;
 
+  // &--productos {
+  //   max-width: 10rem !important;
+  //   width: unset;
+  // }
+
   @include responsive(tab-ver) {
     width: 96% !important;
   }
@@ -89,5 +94,5 @@
   height: 20rem;
   margin-bottom: 10rem;
   background-color: $color-section--light;
-  border-top: 1px solid rgba($color-primary, 0.1);
+  // border-top: 1px solid rgba($color-primary, 0.1);
 }
