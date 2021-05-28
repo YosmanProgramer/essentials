@@ -1,0 +1,64 @@
+.contacto {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  column-gap: 6rem;
+
+  @include responsive(tab-ver) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+  }
+
+  &__item:first-child {
+    @include responsive(tab-ver) {
+      text-align: center;
+    }
+  }
+
+  &__item:nth-child(2) {
+    position: relative;
+    align-self: flex-end;
+    padding-left: 2.5rem;
+  }
+
+  &__titulo {
+    text-transform: unset;
+
+    @include responsive(tab-ver) {
+      text-align: center;
+    }
+  }
+
+  &__imagen {
+    &--izquierda {
+      width: 100%;
+
+      @include responsive(tab-ver) {
+        width: 60%;
+      }
+    }
+    &--derecha {
+      width: 90%;
+
+      @include responsive(tab-ver) {
+        display: none;
+      }
+    }
+  }
+
+  &__form {
+    margin-bottom: 5rem;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $color-black;
+    padding: 2rem 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

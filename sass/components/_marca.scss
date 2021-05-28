@@ -1,24 +1,62 @@
 .marca {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 10rem;
   position: relative;
 
-  &__item {
+  @include responsive(tab-ver) {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  &__item:nth-child(1) {
+    position: relative;
+    @include responsive(tab-ver) {
+    }
+  }
+
+  &__item:nth-child(2) {
+    position: relative;
+    @include responsive(tab-ver) {
+      padding: 6rem 2rem;
+    }
   }
 
   &__imagen {
-    width: 80%;
+    width: 100%;
+    height: auto;
+
+    @include responsive(tab-ver) {
+      width: 50%;
+    }
   }
 
   &__parrafo:not(:last-child) {
     margin-bottom: 3rem;
   }
 
+  &__parrafo {
+    text-align: left;
+  }
+
   &__textura-crema {
     position: absolute;
-    bottom: -8rem;
-    right: 10rem;
-    width: 15rem;
-    height: 15rem;
+    bottom: 8%;
+    right: -8%;
+    width: 30%;
+
+    @include responsive(tab-hor) {
+      bottom: -15%;
+      right: -8%;
+    }
+
+    @include responsive(tab-ver) {
+      width: 20%;
+      bottom: -6%;
+    }
+
+    @include responsive(phone) {
+      bottom: 0;
+    }
   }
 }

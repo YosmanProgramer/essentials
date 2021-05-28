@@ -9,12 +9,35 @@
   &--index {
     height: 40rem;
     background-image: url(../img/imagenbanner.jpg);
+
+    @include responsive(tab-hor) {
+      height: 35rem;
+    }
+
+    @include responsive(tab-ver) {
+      height: 30rem;
+    }
+
+    @include responsive(phone) {
+      height: 25rem;
+    }
   }
 
   &--marca {
     padding: 25rem 0;
-    height: 50rem;
     background-image: url(../img/img_marca/banner.jpg);
     margin-top: -25rem;
+
+    @include responsive(tab-hor) {
+      padding: 15rem 0;
+    }
+
+    @include responsive(tab-ver) {
+      padding: 10rem 0;
+    }
+
+    @include responsive(phone) {
+      padding: 5rem 0;
+    }
   }
 }

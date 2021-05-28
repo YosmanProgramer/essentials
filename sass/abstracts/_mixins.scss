@@ -1,3 +1,43 @@
+// RESPONSIVE WEB DESIGN - DESKTOP FIRST
+
+// 0px a 600px -> celulares
+// 600px a 900px -> tablets verticales
+// 900px a 1200px -> tablets horizontales
+// 1200px a 1800px -> escritorio -- POR DEFECTO
+// 1800px en adelante -> pantallas grandes
+
+// Nombre de variables para los argumentos y puntos de quiebre -> Puntos de quiebre (breakpoint)
+// 16px -> 1em
+
+// phone 0px - 600px -> 600px / 16px -> 37.5em;
+// tab-ver 600px - 900px -> 900px / 16px -> 56.25em;
+// tab-hor 900px - 1200px -> 1200px / 16px -> 75em;
+// Desktop -> POR DEFECTO
+// big-desk 1800px -> 1800px / 16px -> 112.5em;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-ver {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-hor {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desk {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
 // ANIMATIONS
 @mixin animation($name) {
   @if $name == right-left {
@@ -6,4 +46,12 @@
   @if $name == top-bottom {
     animation: top-bottom 0.8s 0.6s ease-in-out backwards;
   }
+}
+
+// ABS
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

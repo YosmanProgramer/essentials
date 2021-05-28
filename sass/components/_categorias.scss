@@ -12,10 +12,17 @@ $silk-serif-light: 'silk-serif-300';
 
   &__imagen {
     display: block;
-    height: auto;
     width: 30%;
     border-top-left-radius: 45%;
     border-top-right-radius: 45%;
+
+    @include responsive(tab-ver) {
+      width: 50%;
+    }
+
+    @include responsive(tab-ver) {
+      width: 60%;
+    }
   }
 
   &__titulo {
@@ -34,6 +41,18 @@ $silk-serif-light: 'silk-serif-300';
     text-transform: uppercase;
     letter-spacing: 3px;
     color: $color-white;
+
+    @include responsive(tab-hor) {
+      font-size: 4.3rem;
+    }
+
+    @include responsive(tab-ver) {
+      font-size: 3rem;
+    }
+
+    @include responsive(phone) {
+      font-size: 2.5rem;
+    }
   }
 
   &__flotante {

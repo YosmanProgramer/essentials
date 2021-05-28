@@ -1,0 +1,98 @@
+.rutina {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include responsive(tab-ver) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item:first-child {
+    a {
+      position: absolute;
+      @include absCenter;
+    }
+
+    @include responsive(tab-ver) {
+    }
+  }
+
+  &__item:last-child {
+    padding-top: 10rem;
+    padding-left: 10rem;
+    width: 80%;
+
+    @include responsive(tab-hor) {
+      padding-top: 5rem;
+      padding-left: 5rem;
+      width: 90%;
+    }
+
+    @include responsive(tab-ver) {
+      width: 95%;
+    }
+
+    @include responsive(phone) {
+      width: 98%;
+      padding-left: 2rem;
+    }
+  }
+
+  &__imagen {
+    width: 100%;
+    display: block;
+
+    @include responsive(tab-ver) {
+      height: 40rem;
+      object-fit: cover;
+    }
+
+    @include responsive(phone) {
+      height: 35rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 0;
+
+    &-item {
+      padding: 1.5rem 0;
+      border-top: 1px solid $color-black;
+
+      &:last-of-type {
+        border-bottom: 1px solid $color-black;
+      }
+    }
+  }
+
+  &__flotante {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include absCenter;
+    top: 95%;
+
+    @include responsive(tab-hor) {
+      width: 20%;
+    }
+
+    @include responsive(tab-ver) {
+      width: 25%;
+    }
+
+    @include responsive(phone) {
+      width: 30%;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+  }
+}

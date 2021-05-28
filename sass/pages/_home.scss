@@ -1,6 +1,6 @@
 .seccion-nuestra-marca {
   background-color: $color-white;
-  padding-bottom: 1rem;
+  padding-bottom: 7rem;
 }
 
 .seccion-productos {
@@ -19,10 +19,51 @@
   position: relative;
   padding: 10rem 0 40rem 0;
   background-color: $color-section--dark;
+
+  @include responsive(tab-hor) {
+    padding: 0 0 30rem 0;
+  }
+
+  @include responsive(tab-ver) {
+    padding: 0 0 35rem 0;
+  }
+
+  @include responsive(phone) {
+    padding: 0 0 30rem 0;
+  }
 }
 
 .seccion-suscripcion {
   padding: 5rem;
   border-top: 1px solid $color-black;
   border-bottom: 1px solid $color-black;
+}
+
+.seccion-rutina {
+  position: relative;
+  background-color: $color-white;
+  padding-bottom: 12rem;
+}
+
+.seccion-experiencia {
+  position: relative;
+  padding: 6rem 0 12rem 0;
+  background-color: $color-white;
+
+  @include responsive(tab-hor) {
+    padding: 5rem 0 10rem 0;
+  }
+
+  @include responsive(tab-ver) {
+    padding: 4rem 0 8rem 0;
+  }
+
+  @include responsive(phone) {
+    padding: 2rem 0 6rem 0;
+  }
+}
+
+.seccion-contacto {
+  padding: 6rem 0;
+  background-color: $color-section--dark;
 }

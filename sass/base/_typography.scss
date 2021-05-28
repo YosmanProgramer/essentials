@@ -39,6 +39,22 @@ $silk-serif-bold: 'silk-serif-700';
   line-height: 1;
   @include animation(right-left);
 
+  @include responsive(tab-hor) {
+    font-size: 6rem;
+  }
+
+  @include responsive(tab-ver) {
+    font-size: 5rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 4rem;
+  }
+
+  @include responsive(big-desk) {
+    font-size: 7.4rem;
+  }
+
   &--before {
     display: block;
     font-family: $font-body;
@@ -49,6 +65,25 @@ $silk-serif-bold: 'silk-serif-700';
   &--italic {
     font-family: $silk-serif-Extralight;
     @include animation(right-left);
+  }
+
+  &--brown {
+    font-family: $silk-serif-regular;
+    color: $color-primary;
+    line-height: 1.4;
+    font-size: 8rem;
+
+    @include responsive(tab-hor) {
+      font-size: 6.5rem;
+    }
+
+    @include responsive(tab-ver) {
+      font-size: 5.9rem;
+    }
+
+    @include responsive(phone) {
+      font-size: 5rem;
+    }
   }
 
   div {
@@ -64,6 +99,18 @@ $silk-serif-bold: 'silk-serif-700';
   letter-spacing: 0.3rem;
   line-height: 1;
 
+  @include responsive(tab-hor) {
+    font-size: 3.8rem;
+  }
+
+  @include responsive(tab-ver) {
+    font-size: 3.6rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 3.4rem;
+  }
+
   &--brown {
     color: $color-primary;
   }
@@ -71,6 +118,10 @@ $silk-serif-bold: 'silk-serif-700';
   &--black {
     font-family: $silk-serif-bold;
     color: $color-black;
+  }
+
+  &--big {
+    font-size: 5rem;
   }
 
   span {
@@ -108,6 +159,10 @@ $silk-serif-bold: 'silk-serif-700';
   text-transform: uppercase;
   font-size: 1.8rem;
 
+  @include responsive(tab-ver) {
+    left: 70%;
+  }
+
   span {
     position: absolute;
     height: 14rem;
@@ -116,8 +171,23 @@ $silk-serif-bold: 'silk-serif-700';
   }
 
   &--marca {
-    top: 87%;
-    left: 39%;
+    top: 89%;
+    left: 45%;
+
+    @include responsive(tab-hor) {
+      top: 85%;
+      left: 44%;
+    }
+
+    @include responsive(tab-ver) {
+      top: 36%;
+      left: 73%;
+    }
+  }
+
+  &--experiencia {
+    top: 0;
+    left: 65%;
   }
 
   &--black {
@@ -142,5 +212,24 @@ $silk-serif-bold: 'silk-serif-700';
 
   span {
     font-family: $silk-serif-Extralight;
+  }
+
+  @include responsive(tab-hor) {
+    font-size: 2.8rem;
+    padding: 7rem;
+  }
+
+  @include responsive(tab-ver) {
+    font-size: 2.1rem;
+    padding: 5rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 1.6rem;
+    padding: 3rem;
+  }
+
+  @include responsive(big-desk) {
+    font-size: 3rem;
   }
 }

@@ -1,0 +1,85 @@
+.experiencia {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  @include responsive(tab-ver) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+  }
+
+  &__detalles {
+    align-self: flex-end;
+    padding: 10rem 0;
+
+    @include responsive(tab-hor) {
+      padding: 4rem 0;
+    }
+  }
+
+  &__fondo {
+    text-align: center;
+
+    @include responsive(tab-ver) {
+      position: relative;
+    }
+  }
+
+  &__iconos {
+    align-self: center;
+    text-align: center;
+  }
+
+  &__imagen {
+    width: 85%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+
+    @include responsive(tab-ver) {
+      width: 50%;
+    }
+
+    @include responsive(tab-ver) {
+      width: 60%;
+    }
+  }
+
+  &__lista {
+    list-style: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+
+  &__icono {
+    height: 8rem;
+    width: auto;
+  }
+
+  &__titulo {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 4.5vw;
+    width: 45%;
+
+    @include responsive(tab-ver) {
+      position: relative;
+      top: unset;
+      left: unset;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__descripcion {
+    @include responsive(tab-ver) {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
