@@ -50,6 +50,11 @@ button {
     top: 32%;
     left: 65%;
     transform: translate(-50%, -50%);
+
+    @include responsive('tab-hor') {
+      top: 15%;
+      left: 70%;
+    }
   }
 
   &--contacto {
@@ -74,5 +79,40 @@ button {
 
   &--animation {
     @include animation(top-bottom);
+  }
+}
+
+.btn-up {
+  position: fixed;
+  bottom: 3rem;
+  right: -5rem;
+  z-index: 150;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 5rem;
+  height: 5rem;
+
+  color: $color-white;
+  background-color: $color-primary;
+
+  cursor: pointer;
+
+  border-radius: 1rem;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-0.8rem);
+
+    @include responsive(tab-hor) {
+      transform: unset;
+    }
+  }
+
+  &--active {
+    right: 3rem;
   }
 }

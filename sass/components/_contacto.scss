@@ -18,6 +18,10 @@
     position: relative;
     align-self: flex-end;
     padding-left: 2.5rem;
+
+    @include responsive(tab-ver) {
+      padding-left: 0;
+    }
   }
 
   &__titulo {

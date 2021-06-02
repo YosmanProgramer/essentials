@@ -1,16 +1,55 @@
 .nav {
   padding-top: 3.5rem;
 
+  @include responsive(tab-hor) {
+    display: none;
+  }
+
+  &--mobile {
+    position: relative;
+    display: none;
+
+    @include responsive(tab-hor) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: block;
+      padding-top: 0;
+      padding: 1.5rem 0;
+      background-color: $color-primary;
+    }
+  }
+
   &__list {
     list-style: none;
     display: flex;
 
-    @include responsive(tab-ver) {
-      visibility: hidden;
+    @include responsive(tab-hor) {
+      position: absolute;
+      top: 9rem;
+      left: -100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 50%;
+      height: 100vh;
+      background-color: $color-primary;
+      transition: all 0.3s ease;
+
+      &--active {
+        left: 0;
+      }
     }
   }
   &__item:not(:last-child) {
     margin-right: 6.5rem;
+
+    @include responsive(tab-hor) {
+      margin-right: 0;
+    }
   }
   &__link {
     text-decoration: none;
@@ -27,6 +66,62 @@
     height: 4.5rem;
     width: auto;
   }
+
+  &__menu {
+    position: relative;
+    cursor: pointer;
+    display: none;
+
+    @include responsive(tab-hor) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      display: block;
+      width: 4rem;
+      height: 1px;
+      background-color: $color-white;
+      transition: all 0.3s ease;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+
+    &--active {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        top: 0;
+      }
+
+      &::before {
+        transform: rotate(135deg);
+      }
+
+      &::after {
+        transform: rotate(-135deg);
+      }
+    }
+  }
 }
 
 .nav--light .u-contenedor,
@@ -35,14 +130,28 @@
   justify-content: space-between;
   align-items: center;
   height: 6rem;
+
+  @include responsive(tab-hor) {
+    justify-content: space-between;
+  }
 }
 
 .nav--light .u-contenedor {
   border-top: 1px solid $color-white;
   border-bottom: 1px solid $color-white;
+
+  @include responsive(tab-hor) {
+    border-top: unset;
+    border-bottom: unset;
+  }
 }
 
 .nav--dark .u-contenedor {
   border-top: 1px solid $color-black;
   border-bottom: 1px solid $color-black;
+
+  @include responsive(tab-hor) {
+    border-top: unset;
+    border-bottom: unset;
+  }
 }

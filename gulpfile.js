@@ -3,6 +3,7 @@
 // VARIABLES
 const { src, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
 
 // FUNCIONES
 exports.sass = () => {

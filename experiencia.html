@@ -33,6 +33,31 @@
           </ul>
         </div>
     </nav>
+    <nav class="nav nav--mobile nav--light">
+      <div class="u-contenedor">
+        <div></div>
+        <a href="index.html" class="nav__link nav__link--light"
+          ><img src="img/logo.png" alt="Logotipo" class="nav__logo" />
+        </a>
+        <ul class="nav__list nav__list--mobile">
+          <li class="nav__item">
+            <a href="nuestraMarca.html" class="nav__link nav__link--light">Nuestra marca</a>
+          </li>
+          <li class="nav__item">
+            <a href="productos.html" class="nav__link nav__link--light">Productos</a>
+          </li>
+          <li class="nav__item">
+            <a href="experiencia.html" class="nav__link nav__link--light">Experiencia</a>
+          </li>
+          <li class="nav__item">
+            <a href="contacto.html" class="nav__link nav__link--light">Contacto</a>
+          </li>
+        </ul>
+        <div class="nav__menu">
+          <span class="nav__icon"></span>
+        </div>
+      </div>
+    </nav>
     <div class="header__content-box header__content-box--experiencia">
         <h1 class="heading-primary heading-primary--brown">
           Expertos en el <br>
@@ -179,15 +204,17 @@
         </div>
       </div>
     </footer>
+    <div class="overlay hidden"></div>
+    <div class="btn-up">&UpArrow;</div>
+    <script src="js/script.js"></script>
     <script>
-      const circle = document.querySelector('.circle');
       const circleArray = circle.textContent.split('');
       circle.textContent = '';
-
+      
       circleArray.forEach(function (__, i) {
-        circle.innerHTML += `<span style="transform: rotate(${
-          (i + 1) * 11.5
-        }deg)">${circleArray[i]}</span>`;
+      circle.innerHTML += `<span style="transform: rotate(${(i + 1) * 11.5}deg)">${
+      circleArray[i]
+      }</span>`;
       });
     </script>
   </body>

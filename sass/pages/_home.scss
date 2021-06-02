@@ -66,4 +66,16 @@
 .seccion-contacto {
   padding: 6rem 0;
   background-color: $color-section--dark;
+
+  @include responsive(tab-hor) {
+    padding: 16rem 0;
+  }
+
+  @include responsive(tab-ver) {
+    padding: 14rem 0;
+  }
+
+  @include responsive(phone) {
+    padding: 12rem 0;
+  }
 }

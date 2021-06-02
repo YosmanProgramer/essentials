@@ -127,6 +127,10 @@ $silk-serif-regular: 'silk-serif-400';
       color: $color-primary;
       text-transform: uppercase;
       transform: translate(-50%, -50%);
+
+      @include responsive(tab-hor) {
+        visibility: hidden;
+      }
     }
   }
   &__flotante-titulo {
