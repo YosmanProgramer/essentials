@@ -1,6 +1,10 @@
 .nav {
   padding-top: 3.5rem;
 
+  &--active {
+    padding-top: 0;
+  }
+
   @include responsive(tab-hor) {
     display: none;
   }
@@ -60,6 +64,10 @@
 
     &--dark {
       color: $color-black;
+    }
+
+    &--active {
+      color: $color-white;
     }
   }
   &__logo {
@@ -154,4 +162,18 @@
     border-top: unset;
     border-bottom: unset;
   }
+}
+
+.nav--active .u-contenedor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-top: unset;
+  border-bottom: unset;
+  background-color: $color-primary;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 4rem 2.5rem;
+  transition: padding 0.3s ease;
 }

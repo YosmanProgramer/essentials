@@ -1710,6 +1710,10 @@ button--animation {
   padding-top: 3.5rem;
 }
 
+.nav--active {
+  padding-top: 0;
+}
+
 @media only screen and (max-width: 75em) {
   .nav {
     display: none;
@@ -1779,6 +1783,10 @@ button--animation {
 
 .nav__link--dark {
   color: #1b262c;
+}
+
+.nav__link--active {
+  color: #fff;
 }
 
 .nav__logo {
@@ -1876,6 +1884,36 @@ button--animation {
   .nav--dark .u-contenedor {
     border-top: unset;
     border-bottom: unset;
+  }
+}
+
+.nav--active .u-contenedor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-top: unset;
+  border-bottom: unset;
+  background-color: #8c5431;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 4rem 2.5rem;
+  transition: padding 0.3s ease;
+}
+
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section--now {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

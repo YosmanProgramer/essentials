@@ -1,3 +1,19 @@
+.section {
+  transition: transform 1s, opacity 1s;
+
+  &--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  &--now {
+    @include responsive(phone) {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 .seccion-nuestra-marca {
   background-color: $color-white;
   padding-bottom: 7rem;
