@@ -1633,6 +1633,13 @@ button--animation {
   word-spacing: 10rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .header__flotante-titulo {
+    font-size: 5rem;
+    word-spacing: 1rem;
+  }
+}
+
 .header__flotante-titulo span {
   color: #fff;
   font-size: inherit;

@@ -146,6 +146,11 @@ $silk-serif-regular: 'silk-serif-400';
     font-size: 6rem;
     word-spacing: 10rem;
 
+    @include responsive(phone) {
+      font-size: 5rem;
+      word-spacing: 1rem;
+    }
+
     span {
       color: $color-white;
       font-size: inherit;
